@@ -1,50 +1,41 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# 🤖 Vinci - Mentor e Estratégista Financeiro Racional
 
-## Contexto
-
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
-
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
-
-> [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
+> Agente de IA Generativa Local (Ollama + Streamlit) com inteligência analítica de dupla rota: ensina conceitos financeiros do zero para leigos e calcula alocações de ativos seguras e matemáticas para investidores iniciados, blindando-os contra vieses emocionais.
 
 ---
 
-## O Que Você Deve Entregar
+## 💡 O Que é o Vinci?
 
-### 1. Documentação do Agente
+O Vinci é um ecossistema de orientação financeira focado em dois perfis de usuários. Ele identifica a maturidade do cliente e bifurca sua inteligência em dois motores distintos:
 
-Defina **o que** seu agente faz e **como** ele funciona:
+### 📑 1/3: O Motor de Triagem e Diagnóstico (Onboarding)
+*   **Identificação de Maturidade:** Avalia o nível de conhecimento técnico e estabilidade financeira do usuário.
+*   **Análise de Saúde Financeira:** Varre o histórico de transações (`transacoes.csv`) para diagnosticar a capacidade de poupança e calcular o tamanho ideal da **Reserva de Emergência** antes de qualquer passo de investimento.
 
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
+### 📚 2/3: A Rota Educacional Didática (Foco: Leigo / Thiago)
+*   **Tradução de "Economês":** Explica conceitos como Inflação, Selic e CDI usando metáforas cotidianas baseadas na realidade do usuário.
+*   **Engenharia Educativa:** Ensina os pilares de proteção do dinheiro sem empurrar produtos, garantindo que o usuário entenda o *porquê* de cada movimento.
 
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
-
----
-
-### 2. Base de Conhecimento
-
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
-
-| Arquivo | Formato | Descrição |
-|---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
-
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
-
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
+### 📈 3/3: O Motor de Alocação Racional (Foco: Iniciado / Mariana)
+*   **Cálculo Baseado em Prazos:** Cruza os objetivos do cliente (Curto, Médio e Longo Prazo) com a liquidez dos ativos.
+*   **Mitigação de Risco e Volatilidade:** Implementa uma matriz racional de alocação (Renda Fixa Pós, IPCA e Renda Variável) baseada na tolerância emocional e matemática a perdas.
+*   **Geração de Carteira Teórica:** Desenha o balizamento percentual ideal para o momento macroeconômico, agindo como um escudo contra a ganância e dicas quentes de mercado.
 
 ---
+
+## 🏗️ Arquitetura do Sistema
+
+O Vinci isola a camada visual da lógica analítica, rodando 100% offline para garantir privacidade total dos dados do usuário.
+
+```mermaid
+flowchart TD
+    A[Usuário] --> B[Interface Streamlit]
+    B --> C[Lógica de Negócio / Pandas & Python]
+    C --> D[Ollama - LLM Local gpt-oss]
+    D --> E[Base de Conhecimento / Mocks JSON & CSV]
+    E --> D
+    D --> C
+    C --> F[Dashboard Visual + Resposta do Chat]
 
 ### 3. Prompts do Agente
 
