@@ -1,10 +1,10 @@
-# 🤖 Vinci - Mentor e Estratégista Financeiro Racional
+# Vinci - Mentor e Estratégista Financeiro Racional
 
 > Agente de IA Generativa Local (Ollama + Streamlit) com inteligência analítica de dupla rota: ensina conceitos financeiros do zero para leigos e calcula alocações de ativos seguras e matemáticas para investidores iniciados, blindando-os contra vieses emocionais.
 
 ---
 
-## 💡 O Que é o Vinci?
+## O Que é o Vinci?
 
 O Vinci é um ecossistema de orientação financeira focado em dois perfis de usuários. Ele identifica a maturidade do cliente e bifurca sua inteligência em dois motores distintos:
 
@@ -23,7 +23,7 @@ O Vinci é um ecossistema de orientação financeira focado em dois perfis de us
 
 ---
 
-## 🏗️ Arquitetura do Sistema
+## Arquitetura do Sistema
 
 O Vinci isola a camada visual da lógica analítica, rodando 100% offline para garantir privacidade total dos dados do usuário.
 
@@ -45,7 +45,7 @@ Documente os prompts que definem o comportamento do seu agente:
 - **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
 - **Tratamento de Edge Cases:** Como o agente lida com situações limite
 
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
+ **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
 
 ---
 
@@ -57,7 +57,7 @@ Desenvolva um **protótipo funcional** do seu agente:
 - Integração com LLM (via API ou modelo local)
 - Conexão com a base de conhecimento
 
-📁 **Pasta:** [`src/`](./src/)
+ **Pasta:** [`src/`](./src/)
 
 ---
 
@@ -70,7 +70,7 @@ Descreva como você avalia a qualidade do seu agente:
 - Taxa de respostas seguras (sem alucinações)
 - Coerência com o perfil do cliente
 
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
+ **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
 
 ---
 
@@ -82,7 +82,7 @@ Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
 - Como ele funciona na prática?
 - Por que essa solução é inovadora?
 
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
+ **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
 
 ---
 
