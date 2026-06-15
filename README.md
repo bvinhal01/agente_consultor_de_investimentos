@@ -27,7 +27,7 @@ O Vinci é um ecossistema de orientação financeira focado em dois perfis de us
 
 O Vinci isola a camada visual da lógica analítica, rodando 100% offline para garantir privacidade total dos dados do usuário.
 
-```mermaid
+``mermaid
 flowchart TD
     A[Usuário] --> B[Interface Streamlit]
     B --> C[Lógica de Negócio / Pandas & Python]
